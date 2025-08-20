@@ -1,3 +1,4 @@
+.env
 my-rag-on-cloud.pem
 terraform
 terraform-frntend
