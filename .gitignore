@@ -1,0 +1,21 @@
+my-rag-on-cloud.pem
+terraform
+terraform-frntend
+iam_role_creation
+# Ignore TinyLLaMA model
+*.gguf
+
+# Ignore Terraform providers
+.terraform/
+.terraform.lock.hcl
+
+./fastapi-s3-upload/_pycache__
+./fastapi-s3-upload/terraform.tfstate
+./fastapi-s3-upload/main.tf
+./fastapi-s3-upload/terraform.tfstate.backup
+./fastapi-s3-upload/outputs.tf
+./fastapi-s3-upload/variables.tf
+./fastapi-s3-upload/iam.tf
+./fastapi-s3-upload/lambda_function_payload.zip
+
+
