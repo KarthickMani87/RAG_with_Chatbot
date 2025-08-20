@@ -1,0 +1,5 @@
+fastapi
+magnum
+uvicorn
+boto3
+python-dotenv

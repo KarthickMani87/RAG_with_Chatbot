@@ -1,0 +1,10 @@
+.env
+__pycache__/
+.cache/
+.venv/
+*.zip
+!app
+!Dockerfile
+!requirements.txt
+!serverless.yml
+!main.py

@@ -1,0 +1,25 @@
+service: fastapi-s3
+
+provider:
+  name: aws
+  runtime: python3.11
+  region: ap-southeast-2
+  environment:
+    AWS_ACCESS_KEY_ID: ${env:AWS_ACCESS_KEY_ID}
+    AWS_SECRET_ACCESS_KEY: ${env:AWS_SECRET_ACCESS_KEY}
+    AWS_REGION: ${env:AWS_REGION}
+    S3_BUCKET: ${env:S3_BUCKET}
+
+functions:
+  api:
+    handler: main.handler
+    events:
+      - httpApi: '*'  # All paths
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+

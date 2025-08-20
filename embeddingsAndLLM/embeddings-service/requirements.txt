@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+boto3
+sentence-transformers
+faiss-cpu
+pydantic
+torch==2.1.2  # ✅ Plain version
+-f https://download.pytorch.org/whl/cpu/torch_stable.html

@@ -1,0 +1,24 @@
+version: "3.8"
+
+services:
+  embedding:
+    build: ./embedding-service
+    ports:
+      - "8001:8000"
+    container_name: embedding-service
+
+  llm:
+    build: ./llm-service
+    ports:
+      - "5000:5000"
+    container_name: llm-service
+
+  orchestrator:
+    build: ./orchestrator-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - embedding
+      - llm
+    container_name: orchestrator-api
+
